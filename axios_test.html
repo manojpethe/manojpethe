@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script type="text/javascript">
+
+function postmyform(name,phone){
+
+console.log('name:'+name+' phone:'+phone);
+
+
+var json_string = '{\
+	"name": "'+name+'",\
+  	"phone": "'+phone+'\
+ "}'
+
+axios.post('http://127.0.0.1:5000/formsubmit', json_string)
+.then((response) => {
+  console.log(response);
+}, (error) => {
+  console.log(error);
+});
+
+}
+
+
+function getdata(){
+
+	axios.get('http://127.0.0.1:5000/formsubmit')
+  .then((response) => {
+    console.log(response.data);
+    console.log(response.status);
+    console.log(response.statusText);
+    console.log(response.headers);
+    console.log(response.config);
+  });
+}
+
+	</script>
+</head>
+<body>
+
+<form name="myform">
+	
+<table>
+	<tr><td>Name</td><td><input type="text" id="name" name="name"></td></tr>
+	<tr><td>Phone</td><td><input type="text" id="phone" name="phone"></td></tr>
+	<tr><td></td><td><input type="button" name="Submit" value="Submit" onclick="postmyform(document.getElementById('name').value,document.getElementById('phone').value)"></td></tr>
+</table>
+
+<input type="button" name="Submit" value="getdata" onclick="getdata()">
+
+</form>
+
+
+</body>
+</html>

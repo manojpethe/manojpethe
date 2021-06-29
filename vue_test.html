@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+
+</head>
+<body>
+
+<div id="renderOrder">
+	<input type="text" name="num1" v-model="num1" ><p>
+	<input type="text" name="num2" v-model="num2" ><p>
+	<input type="text" name="num3" v-model="num3" ><p>
+</div>
+
+
+<script type="text/javascript">
+
+let renderOrder = new Vue({
+            el : '#renderOrder',
+            data: {
+            	num1 : 0,
+            	num2 : 0,
+            	//num3: 0
+            },
+            computed: {
+    			num3: function () {
+      			return(parseInt(this.num1)+parseInt(this.num2))
+    			}
+        	}
+    })
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#myDIV {
+  width: 25%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<p>Click the "Try it" button to toggle between hiding and showing the DIV element:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV">
+This is my DIV element.
+<button onclick="myFunction()">ADD Item</button>
+</div>
+
+<p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
+
+
+<div id="myDIV01">
+<button onclick="toggleDiv('myDIV02');toggleDiv('myDIV01');addQty('prd_1')"> ADD to Cart </button>
+</div>
+<div id="myDIV02" style="display:none">
+<button onclick="addQty('prd_1')"> + </button><input disabled type="text" size="1" id="prd_1" name="prd_1" onchange="if(this.value == 0){toggleDiv('myDIV01');toggleDiv('myDIV02')}"><button onclick="subQty('prd_1')"> - </button>
+</div>
+
+
+<script>
+
+// Add to cart button functions /
+
+function toggleDiv(divname) {
+  var x = document.getElementById(divname);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function addQty(id){
+	document.getElementById(id).value++;
+}
+
+function subQty(id){
+	var qty = document.getElementById(id).value--;
+	if(qty == 1){
+		toggleDiv('myDIV02');
+		toggleDiv('myDIV01');																
+	}
+}
+
+
+// EOF: Add to cart button functions /
+
+</script>
+
+</body>
+</html>
+

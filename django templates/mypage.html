@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+
+<html lang="en-us" dir="ltr">
+<head>
+<title>MyPage</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css">
+
+  <link rel="stylesheet" type="text/css" href="/static/admin/css/nav_sidebar.css">
+  <script src="/static/admin/js/nav_sidebar.js" defer></script>
+
+<link rel="stylesheet" type="text/css" href="/static/admin/css/dashboard.css">
+
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css">
+
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=" dashboard" data-admin-utc-offset="0">
+
+  <div id="header">
+        <div id="branding">
+
+<h1 id="site-name"><a href="/helloworld/mypage/">My Page</a></h1>
+
+        </div>
+  </div>
+
+<!-- Container -->
+<div id="container">
+
+This is coming from a template
+<hr>
+<p>
+{% for d in data %}
+num1: {{ d.0 }}<br>
+num2: {{ d.1 }}<br>
+num3: {{ d.2 }}<br>
+num4: {{ d.3 }}<br>
+num5: {{ d.4 }}<br>
+num6: {{ d.5 }}<br>
+num7: {{ d.6 }}<br><p>
+{% endfor %}
+
+
+</body>
+</html>

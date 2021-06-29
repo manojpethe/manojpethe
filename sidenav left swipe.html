@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize is a modern responsive CSS framework based on Material Design by Google. ">
+    <title>Sidenav - Materialize</title>
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+    <link href="https://materializecss.com/css/prism.css" rel="stylesheet">
+    <link href="https://materializecss.com/css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+
+
+<div class="row">
+  <div class="blue m6 s6 l6 white-text">
+  <a href="#" data-target="slide-out1" class="sidenav-trigger blue white-text btn-flat"><i class="material-icons">menu</i>
+  </a>&nbsp;&nbsp;&nbsp;KK Market | Pethe Jewellers
+  </div>
+</div>
+
+        <ul id="slide-out1" class="sidenav">
+          <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="https://materializecss.com/images/office.jpg">
+              </div>
+              <a href="#user">
+                <img class="circle" src="https://materializecss.com/images/yuna.jpg">
+              </a>
+              <a href="#name">
+                <span class="white-text name">Username</span>
+              </a>
+            </div>
+          </li>
+          <li>
+            <a href="#!">
+              <i class="material-icons">help</i>Help</a>
+          </li>
+          <li>
+            <a href="#!">View Catalog</a>
+          </li>
+          <li>
+            <div class="divider"></div>
+          </li>
+          <li>
+            <a class="subheader green lighten-4">Seller Toolbox</a>
+          </li>
+          <li>
+            <a class="waves-effect" href="#!">Catalog Manager</a>
+          </li>
+          <li>
+            <a class="waves-effect" href="#!">Add new Product</a>
+          </li>
+          <li>
+            <a class="waves-effect" href="#!">Order Manager</a>
+          </li>
+        </ul>
+
+
+
+
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1" onclick="order_number = 1;">Modal</a>
+
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1" onclick="order_number = 2;">Modal</a>
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1" onclick="order_number = 3;">Modal</a>
+
+<script type="text/javascript">
+  
+  var order_number = 0;
+
+</script>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Update Order status</h4>
+      <h5>Status Definition:</h5>
+        <P>
+          <table>
+            <tr><td><button class="btn orange white-text" onclick="alert(order_number);location.reload();">Created</button></td><td>Order created by Customer, needs your attention.</td></tr>
+       <tr><td><button class="btn green white-text" onclick="alert(order_number);location.reload();">Closed</button></td><td>Product has been delivered and order can be closed. Order will appear in the Archive Folder (in Order Manager).</td></tr>
+       <tr><td><button class="btn brown white-text" onclick="alert(order_number);location.reload();">Cancelled</button></td><td>Order cancelled by customer due to unavailability of product or some other reason. Order will appear in the Archive Folder (in Order Manager).</td></tr>
+        </table>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">cancel update</a>
+    </div>
+  </div>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://materializecss.com/bin/materialize.js"></script>
+    <script src="https://materializecss.com/docs/js/init.js"></script>
+
+
+
+  </body>
+</html>

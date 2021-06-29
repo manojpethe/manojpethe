@@ -1,0 +1,14 @@
+<HTML>
+<BODY>
+
+<BUTTON onclick="setClipboard1('My World!')">Click me</BUTTON>
+	
+<SCRIPT>
+
+function setClipboard1(text){
+	var promise = navigator.clipboard.writeText(text);
+}
+</SCRIPT>
+
+</BODY>
+</HTML>

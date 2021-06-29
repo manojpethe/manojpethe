@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" name="name1" id="name1" value="Nothing"><br>
+	<input type="text" name="name" id="name" value="Nothing">
+	<br>
+	<input type="button" onclick="document.getElementById('name').value='Something';document.getElementById('name1').value='Something1'" value="Change the text">
+
+<p>
+	<input type="text" name="num1" id="num1" value="0"><br>
+	<input type="text" name="num2" id="num2" value="0">
+	<br>
+	<input type="button" onclick="alert(myfunction(document.getElementById('num1').value,document.getElementById('num2').value))" value="Click me">
+
+<script type="text/javascript">
+	
+	function myfunction(a,b){
+		//var a = 1;
+		//var b = 2;
+		//alert(a+" "+b);
+		var c = parseInt(a) + parseInt(b);
+		return c;
+	}
+
+</script>
+
+
+</body>
+</html>

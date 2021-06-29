@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<title></title>
+	<style type="text/css">		
+.float{
+	position:fixed;
+	width:100%;
+	height:100px;
+	bottom:1px;
+	left:1px;
+	background-color:#00c853;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+	font-size: 80px;
+}
+.addBtn{
+	width:145px;
+	height:140px;
+	background-color:green;
+	color:white;
+	font-size: 80px;
+	border-radius:30px;
+	text-align:center;
+}
+
+
+.QtyText{
+	width:135px;
+	height:135px;
+	background-color:white;
+	color:black;
+	font-size: 80px;
+	border-radius:30px;
+	text-align:center;
+
+}
+
+.subBtn{
+	width:145px;
+	height:140px;
+	background-color:red;
+	color:white;
+	font-size: 80px;
+	border-radius:30px;
+	text-align:center;
+}
+
+	</style>
+
+</head>
+<body>
+
+
+<form method="POST" action="http://localhost:5000/formsubmit">
+
+<a href="#" class="float_error">Place your Order Now </a>
+
+<input type="button" name="add" class="addBtn" value="+1">
+<input type="text" name="qty" class="QtyText" value="0">
+<input type="button" name="sub" class="subBtn" value="-1">
+<a href="#" class="addBtn"><h3> + 1 </h3></a>
+<input type="submit" name="submit" value="submit">
+
+</form>
+
+</body>
+
+<script type="text/javascript">
+	axios({
+  method: 'post',
+  url: 'http://localhost:5000/formsubmit',
+  data: {
+    firstName: 'Finn',
+    lastName: 'Williams'
+  }
+})
+.then((response) => {
+  console.log(response);
+}, (error) => {
+  console.log(error);
+});
+	console.log("axios post done. ")
+</script>
+
+</html>
+
